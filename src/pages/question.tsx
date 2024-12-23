@@ -1,22 +1,10 @@
-import { Navigate, useParams } from "react-router-dom";
 import QuizComponent from "./quiz";
 
 const Question: React.FC = () => {
-  const { id } = useParams();
-
-  function nextQuestion() {
-    if (id === "5") {
-      <Navigate to="/result" />;
-      return;
-    }
-    const nextId = parseInt(id as string) + 1;
-    <Navigate to={"/" + nextId} />;
-  }
-
   return (
-    <h1>
+    <div>
       <QuizComponent />
-    </h1>
+    </div>
   );
 };
 export default Question;
