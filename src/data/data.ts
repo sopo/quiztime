@@ -17,7 +17,7 @@ type Quiz = {
     isCorrect: boolean;
   };
   
-  const quiz: Quiz = {
+  export const quiz: Quiz = {
     id: 1,
     name: "Quiz #2",
     questions: [
@@ -63,4 +63,3 @@ type Quiz = {
       },
     ],
   };
-  
