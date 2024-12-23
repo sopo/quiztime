@@ -1,32 +1,22 @@
-import { useEffect, useState } from "react"
-import { Navigate, useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom";
+import QuizComponent from "./quiz";
 
-const Question:React.FC =() => {
-    const {id} = useParams()
-    const [question,setQuestion] = useState<any | undefined>(undefined)
+const Question: React.FC = () => {
+  const { id } = useParams();
 
-    useEffect(()=>{
-        // wamovigebt idit questions
-        setQuestion({
-            question:"what is this?",
-            answers:[
-                {
-                    name:"Answer 1"
-                }
-            ]
-        })
-    },[id])
-
-    function nextQuestion(){
-        if(id === '5'){
-            <Navigate to="/result" />
-            return;
-        }
-        const nextId = parseInt(id as string)+1;
-            <Navigate to={"/" + nextId} />
-        
+  function nextQuestion() {
+    if (id === "5") {
+      <Navigate to="/result" />;
+      return;
     }
+    const nextId = parseInt(id as string) + 1;
+    <Navigate to={"/" + nextId} />;
+  }
 
-    return <h1>THIS IS QUESTION: {JSON.stringify(question)} <button onClick={nextQuestion} >Next question</button> </h1>
-}
-export default Question
+  return (
+    <h1>
+      <QuizComponent />
+    </h1>
+  );
+};
+export default Question;
