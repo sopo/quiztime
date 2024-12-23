@@ -1,5 +1,6 @@
 import { Navigate, useParams } from "react-router-dom";
 import QuizComponent from "./quiz";
+import React from "react";
 
 const Question: React.FC = () => {
   const { id } = useParams();

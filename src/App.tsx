@@ -1,4 +1,4 @@
-import "./App.css";
+
 import {
   Navigate,
   RouterProvider,
@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Question from "./pages/question";
 import Result from "./pages/result";
+import React from "react";
 
 const router = createBrowserRouter([
   {
